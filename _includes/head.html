@@ -99,9 +99,11 @@
 
   <!-- Scripts -->
 
-  {% unless site.theme_mode %}
-    <script src="{{ '/assets/js/dist/theme.min.js' | relative_url }}"></script>
-  {% endunless %}
+  {% comment %}
+    {% unless site.theme_mode %}
+      <script src="{{ '/assets/js/dist/theme.min.js' | relative_url }}"></script>
+    {% endunless %}
+  {% endcomment %}
 
   {% include js-selector.html lang=lang %}
 
